@@ -1,0 +1,9 @@
+obj_dir/
+build/
+*.vvp
+*.vcd
+reports/*.log
+reports/*.dot
+reports/*.svg
+reports/*.txt
+*.bak.*
