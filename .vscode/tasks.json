@@ -1,3 +1,4 @@
+
 {
   "version": "2.0.0",
   "tasks": [
@@ -6,7 +7,7 @@
       "type": "shell",
       "command": "bash",
       "args": [
-        "${workspaceFolder}/scripts/full_check.sh"
+        "${workspaceFolder}/scripts/full_check_plus_cocotb.sh"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
@@ -26,6 +27,9 @@
       "label": "IC Design: Full Check",
       "type": "shell",
       "command": "bash",
+      "args": [
+        "${workspaceFolder}/scripts/full_check_plus_cocotb.sh"
+      ],
       "options": {
         "cwd": "${workspaceFolder}"
       },
@@ -34,15 +38,15 @@
         "panel": "dedicated",
         "clear": true
       },
-      "problemMatcher": [],
-      "args": [
-        "${workspaceFolder}/scripts/full_check.sh"
-      ]
+      "problemMatcher": []
     },
     {
       "label": "IC Design: Synthesis (Yosys)",
       "type": "shell",
       "command": "bash",
+      "args": [
+        "${workspaceFolder}/scripts/synth.sh"
+      ],
       "options": {
         "cwd": "${workspaceFolder}"
       },
@@ -51,15 +55,15 @@
         "panel": "dedicated",
         "clear": true
       },
-      "problemMatcher": [],
-      "args": [
-        "${workspaceFolder}/scripts/synth.sh"
-      ]
+      "problemMatcher": []
     },
     {
       "label": "IC Design: Environment Check",
       "type": "shell",
       "command": "bash",
+      "args": [
+        "${workspaceFolder}/scripts/check_env.sh"
+      ],
       "options": {
         "cwd": "${workspaceFolder}"
       },
@@ -68,10 +72,7 @@
         "panel": "dedicated",
         "clear": true
       },
-      "problemMatcher": [],
-      "args": [
-        "${workspaceFolder}/scripts/check_env.sh"
-      ]
+      "problemMatcher": []
     }
   ]
 }
