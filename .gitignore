@@ -7,3 +7,6 @@ reports/*.dot
 reports/*.svg
 reports/*.txt
 *.bak.*
+__pycache__/
+*.py[cod]
+*.result.xml
