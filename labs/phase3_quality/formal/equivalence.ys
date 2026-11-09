@@ -1,0 +1,10 @@
+# The runner generates an equivalent Yosys command with absolute input paths.
+# The following is the core proof recipe:
+# read_verilog -sv <Phase 2 DUT> <counter_reference.sv>
+# proc
+# equiv_make counter_reference rtl_counter equiv_counter
+# hierarchy -top equiv_counter
+# prep -top equiv_counter
+# equiv_simple -seq 3
+# equiv_induct -seq 5
+# equiv_status -assert

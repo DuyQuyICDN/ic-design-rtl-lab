@@ -1,0 +1,28 @@
+name: Phase 4 RTL Portfolio Quality
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rtl-tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Install EDA tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog verilator yosys make
+      - name: Run 3-IP RTL checks
+        env:
+          PHASE4_SKIP_BASELINES: "1"
+        run: make -C labs/phase4_portfolio verify
+      - name: Upload portfolio test reports
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: phase4-rtl-evidence
+          path: labs/phase4_portfolio/reports/runs/
+          if-no-files-found: warn

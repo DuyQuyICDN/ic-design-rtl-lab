@@ -1,0 +1,8 @@
+SIM ?= icarus
+TOPLEVEL_LANG := verilog
+VERILOG_SOURCES := $(PHASE2_RTL)
+COCOTB_TOPLEVEL := rtl_counter
+COCOTB_TEST_MODULES := test_counter
+COMPILE_ARGS += -g2012
+export PYTHONPATH := $(PHASE3_TESTS):$(PYTHONPATH)
+include $(shell cocotb-config --makefiles)/Makefile.sim

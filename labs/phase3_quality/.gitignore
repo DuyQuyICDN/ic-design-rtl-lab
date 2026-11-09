@@ -1,0 +1,10 @@
+# All run artifacts are local and should not be pushed as binaries.
+reports/runs/
+__pycache__/
+*.pyc
+*.vvp
+*.vcd
+*.fst
+*.log
+sim_build/
+results.xml
