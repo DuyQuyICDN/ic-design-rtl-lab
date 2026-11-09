@@ -1,0 +1,7 @@
+reports/runs/
+*.vcd
+*.fst
+*.vvp
+*.log
+*.json.tmp
+__pycache__/

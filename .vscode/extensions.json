@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "mshr-h.veriloghdl",
+    "bmpenuelas.systemverilog-formatter-vscode",
+    "ms-vscode.makefile-tools",
+    "nmoroze.tclint",
+    "ms-python.python",
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+    "redhat.vscode-yaml",
+    "timonwong.shellcheck",
+    "editorconfig.editorconfig"
+  ]
+}

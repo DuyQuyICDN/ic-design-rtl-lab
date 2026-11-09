@@ -1,0 +1,7 @@
+# Only generated Phase 2 EDA artifacts; all code/spec/docs remain trackable.
+reports/runs/
+*.vvp
+*.vcd
+*.fst
+*.log
+obj_dir/

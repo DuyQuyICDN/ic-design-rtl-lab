@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -u
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")/.." || exit
 printf '\n=== IC DESIGN / WSL TOOL CHECK ===\n'
 missing=0
 for tool in bash python3 iverilog vvp verilator yosys; do
